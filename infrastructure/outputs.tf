@@ -13,4 +13,5 @@ output "azure_deploy_token" {
 output "domain_validation_token" {
     description = "Text Record Value needed to verify ownership"
     value = module.azure.domain_validation_token
+    sensitive = true
 }
