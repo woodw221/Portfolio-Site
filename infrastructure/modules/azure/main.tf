@@ -1,6 +1,6 @@
 
 
-resource "azuremrm_resource_group" "portfolio" {
+resource "azurerm_resource_group" "portfolio" {
     name = "${var.project_name}-rg"
     location = var.location
 }
