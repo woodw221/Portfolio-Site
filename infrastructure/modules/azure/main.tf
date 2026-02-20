@@ -8,7 +8,7 @@ resource "azurerm_resource_group" "portfolio" {
 resource "azurerm_static_web_app" "portfolio" {
     name = "${var.project_name}-static-site"
     resource_group_name = azurerm_resource_group.portfolio.name
-    location = azurerm_resource_group.porfolio.location
+    location = azurerm_resource_group.portfolio.location
     sku_tier = "Free"
     sku_size = "Free"
 
