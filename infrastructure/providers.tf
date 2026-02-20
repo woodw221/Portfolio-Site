@@ -4,7 +4,7 @@ terraform {
     required_providers {
         azurerm = {
             source  = "hashicorp/azurerm"
-            version = "~> 3.0"
+            version = "~> 4.0"
         }
 
         cloudflare = {
@@ -22,11 +22,9 @@ terraform {
 }
 
 provider "azurerm" {
-    features {
-      
-    }
+    features {}
+    subscription_id = var.arm_subscription_id
 }
-
 provider "cloudflare" {
     api_token = var.cloudflare_api_token
 }

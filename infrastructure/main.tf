@@ -6,7 +6,7 @@ module "azure" {
     location = var.azure_location
 }
 
-resource "cloudflare_record" "porfolio" {
+resource "cloudflare_record" "portfolio" {
     zone_id = var.cloudflare_zone_id
     name = "@"
     value = module.azure.static_web_app_url

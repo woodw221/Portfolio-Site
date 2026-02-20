@@ -11,6 +11,12 @@ variable "azure_location" {
     default = "East US 2"
 }
 
+variable "arm_subscription_id" {
+    description = "Azure Subscription ID"
+    type = string
+    sensitive = true
+}
+
 variable "domain_name" {
     description = "My Domain"
     type = string

@@ -20,6 +20,7 @@ jobs:
       TF_VAR_cloudflare_zone_id: ${{ secrets.CLOUDFLARE_ZONE_ID}}
       TF_VAR_cloudflare_api_token: ${{ secrets.CLOUDFLARE_TOKEN}}
       TF_VAR_project_name: "portfolio"
+      TF_VAR_arm_subscription_id: ${{secrets.ARM_SUBSCRIPTION_ID}}
 
     steps:
       - uses: actions/checkout@v4
@@ -50,6 +51,7 @@ jobs:
       TF_VAR_cloudflare_zone_id: ${{ secrets.CLOUDFLARE_ZONE_ID}}
       TF_VAR_cloudflare_api_token: ${{ secrets.CLOUDFLARE_TOKEN}}
       TF_VAR_project_name: "portfolio"
+      TF_VAR_arm_subscription_id: ${{secrets.ARM_SUBSCRIPTION_ID}}
 
     steps:
       - uses: actions/checkout@v4
