@@ -60,7 +60,7 @@ jobs:
           terraform_version: 1.14.5
       
       - name: Terraform Init
-        run: terraform Init
+        run: terraform init
         working-directory: ./infrastructure
       
       - name: Terraform Apply
