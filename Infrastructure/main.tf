@@ -1,0 +1,16 @@
+
+
+module "azure" {
+    source = "./modules/azure"
+    project_name = var.project_name
+    location = var.azure_location
+}
+
+resource "cloudflare_record" "porfolio" {
+    zone_id = var.cloudflare_zone_id
+    name = "@"
+    value = module.azure.static_web_app_url
+    type = "CNAME"
+    proxied = true
+    ttl = 1
+}
