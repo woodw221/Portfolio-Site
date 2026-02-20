@@ -9,3 +9,8 @@ variable "location" {
     description = "Azure region"
     type = string
 }
+
+variable "domain_name" {
+    description = "Domain Name"
+    type = string
+}
