@@ -10,7 +10,7 @@
 resource "cloudflare_record" "portfolio" {
     zone_id = var.cloudflare_zone_id
     name = "@"
-    content = module.azure.static_web_app_url
+    content = "proud-rock-0b9c6ba0f.6.azurestaticapps.net"
     type = "CNAME"
     proxied = true
     ttl = 1
