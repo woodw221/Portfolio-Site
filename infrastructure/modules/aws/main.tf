@@ -1,11 +1,7 @@
 
 
 resource "aws_s3_bucket" "portfolio" {
-    bucket = "${var.project_name}-failover-${random_id.suffix.hex}"
-}
-
-resource "random_id" "suffix" {
-    byte_length = 4
+    bucket = "${var.project_name}-portfolio-site"
 }
 
 resource "aws_s3_bucket_website_configuration" "portfolio" {
@@ -93,6 +89,10 @@ resource "aws_cloudfront_distribution" "portfolio" {
     
     viewer_certificate {
       cloudfront_default_certificate = true
+    }
+
+    tags = {
+      project = var.project_name
     }
 
 }
