@@ -28,6 +28,12 @@ variable "aws_region" {
     default = "us-east-1"
 }
 
+variable "aws_role_arn" {
+    description = "AWS IAM Role"
+    type = string
+    sensitive = true
+}
+
 variable "cloudflare_zone_id" {
     description = "Zone ID for Domain"
     type = string
