@@ -29,7 +29,7 @@ resource "aws_acm_certificate" "portfolio" {
 
 resource "cloudflare_record" "cert_validation" {
     for_each = {
-      for dvo in aws_acm_certificate.portfolio.domain.validation_options : dvo.domain_name => {
+      for dvo in aws_acm_certificate.portfolio.domain_validation_options : dvo.domain_name => {
         name = dvo.resource_record_name
         value = dvo.resource_record_value
         type = dvo.resource_record_type
