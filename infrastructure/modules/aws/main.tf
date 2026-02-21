@@ -43,6 +43,7 @@ resource "aws_cloudfront_distribution" "portfolio" {
     enabled = true
     default_root_object = "index.html"
     price_class = "PriceClass_100"
+    aliases = [var.domain_name]
 
     origin {
       domain_name = aws_s3_bucket_website_configuration.portfolio.website_endpoint
