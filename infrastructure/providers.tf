@@ -6,6 +6,11 @@ terraform {
             source  = "hashicorp/azurerm"
             version = "~> 4.0"
         }
+        
+        aws = {
+            source = "hashicorp/aws"
+            version = "~> 6.0"
+        }
 
         cloudflare = {
             source  = "cloudflare/cloudflare"
@@ -25,6 +30,11 @@ provider "azurerm" {
     features {}
     subscription_id = var.arm_subscription_id
 }
+
+provider "aws" {
+    region = var.aws_region
+}
+
 provider "cloudflare" {
     api_token = var.cloudflare_api_token
 }

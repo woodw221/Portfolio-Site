@@ -15,3 +15,13 @@
 #    value = module.azure.domain_validation_token
 #    sensitive = true
 #}
+
+output "aws_cloudfront_url" {
+    description = "AWS Cloudfront Domain Name"
+    value = module.aws.cloudfront_domain
+}
+
+output "aws_s3_bucket_name" {
+    description = "AWS S3 name"
+    value = module.aws.aws_s3_bucket_name
+}

@@ -22,6 +22,12 @@ variable "domain_name" {
     type = string
 }
 
+variable "aws_region" {
+    description = "AWS Region"
+    type = string
+    default = "us-east-1"
+}
+
 variable "cloudflare_zone_id" {
     description = "Zone ID for Domain"
     type = string
