@@ -48,7 +48,7 @@ jobs:
         working-directory: ./infrastructure
       
       - name: Terraform Plan 
-        run: terraform plan -lockout-timeout=300s
+        run: terraform plan -lock-timeout=300s
         working-directory: ./infrastructure
 
   Apply:
@@ -88,5 +88,5 @@ jobs:
         working-directory: ./infrastructure
       
       - name: Terraform Apply 
-        run: terraform apply -auto-approve -lockout-timeout=300s
+        run: terraform apply -auto-approve -lock-timeout=300s
         working-directory: ./infrastructure
