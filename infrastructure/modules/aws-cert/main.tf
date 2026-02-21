@@ -1,4 +1,18 @@
 
+terraform {
+  required_providers {
+    aws = {
+        source = "hashicorp/aws"
+        version = "~> 6.0"
+    }
+
+    cloudflare = {
+        source = "cloudflare/cloudflare"
+        version = "~> 4.0"
+    }
+  }
+}
+
 
 resource "aws_acm_certificate" "portfolio" {
     domain_name = var.domain_name
