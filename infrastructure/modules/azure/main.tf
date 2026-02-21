@@ -21,6 +21,5 @@ resource "azurerm_static_web_app" "portfolio" {
 resource "azurerm_static_web_app_custom_domain" "portfolio" {
     static_web_app_id = azurerm_static_web_app.portfolio.id
     domain_name = var.domain_name
-    validation_type = "dns-txt-token"
-  
+    validation_type = "dns-txt-token"  
 }
