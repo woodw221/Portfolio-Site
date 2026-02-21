@@ -46,13 +46,9 @@ jobs:
       - name: Terraform Init
         run: terraform init
         working-directory: ./infrastructure
-
-      - name: Force Unlock State
-        run: terraform force-unlock -force b42784d6-058b-cc6a-67cb-50d5ab5123e3
-        working-directory: ./infrastructure
       
-      - name: Terraform Plan -lockout-timeout=300s
-        run: terraform plan
+      - name: Terraform Plan 
+        run: terraform plan -lockout-timeout=300s
         working-directory: ./infrastructure
 
   Apply:

@@ -10,6 +10,8 @@
 module "aws" {
     source = "./modules/aws"
     project_name = var.project_name
+    certificate_arn = module.aws_cert.certificate_arn
+    domain_name = var.domain_name
 }
 
 module "aws_cert" {
