@@ -40,6 +40,7 @@ resource "aws_s3_bucket_policy" "portfolio" {
             Resource = "${aws_s3_bucket.portfolio.arn}/*"
         }]
     })
+    depends_on = [ aws_s3_bucket_public_access_block.portfolio ]
 }
 
 resource "aws_cloudfront_distribution" "portfolio" {
