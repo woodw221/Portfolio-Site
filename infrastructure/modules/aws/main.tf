@@ -30,7 +30,7 @@ resource "aws_s3_bucket_public_access_block" "portfolio" {
 
 resource "aws_s3_bucket_policy" "portfolio" {
     bucket = aws_s3_bucket.portfolio.id
-    policy = jsondecode({
+    policy = jsonencode({
         Version = "2012-10-17"
         Statement = [{
             Sid = "PublicReadGetObject"
