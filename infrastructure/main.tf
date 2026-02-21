@@ -12,6 +12,12 @@ module "aws" {
     project_name = var.project_name
 }
 
+module "aws_cert" {
+    source = "./modules/aws-cert"
+    domain_name = var.domain_name
+    cloudflare_zone_id = var.cloudflare_zone_id
+}
+
 resource "cloudflare_record" "portfolio" {
     zone_id = var.cloudflare_zone_id
     name = "@"
@@ -20,3 +26,4 @@ resource "cloudflare_record" "portfolio" {
     proxied = true
     ttl = 1
 }
+
